@@ -1,24 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import Login from "./Components/Loginpage/Login";
+import Navbar from "./Components/Navbar/Navbar";
+import Forgot from "./Components/Forgotpassword/Forgot";
+import Loginbtn from "./Components/LoginButton/Loginbtn";
+import Seller from "./Components/SellerButton/Seller";
+import Cart from "./Components/CartButton/Cart";
+import Logo from "./Components/Logo/Logo";
+import Register from "./Components/Registration/Register";
+import ForgotE from "./Components/ForgotE/ForgotE";
+import ResetPassword from "./Components/ResetPassword/ResetPassword";
+import axios from "axios";
+import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Homepage from "./Components/Homepage/Homepage";
+import Footer from "./Components/Footer/Footer";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
+import Cartpage from "./Components/Cartpage/Cartpage";
+import UpdateAddress from "./Components/UpdateAdress/UpdateAdress";
+import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
+import ConfirmationPage from "./Components/ConfirmationPage/ConfirmationPage";
+// import ProductDetails from "./Components/ProductDetails/ProductDetails";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route
+        path="/homepage"
+        element={
+          <div>
+            <Homepage /> ,<Footer />
+          </div>
+        }
+      />
+      <Route
+        path="/"
+        element={
+          <div>
+            <Login />,<Forgot />,<Loginbtn />,<Seller />,
+            <Logo />,<Footer />
+          </div>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <div>
+            <Login />, <Logo /> ,<Footer /> , <Forgot />
+          </div>
+        }
+      />
+      <Route path="/Register" element={<Register />} />
+      <Route path="/Forgot" element={<ForgotE />} />
+      <Route path="/Reset" element={<ResetPassword />} />
+      <Route path="/Cartpage" element={<Cartpage />} />
+      <Route path="/product/:id" element={<ProductDetails />} />
+      <Route path="/UpdateAddress" element={<UpdateAddress />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/confirmation" element={<ConfirmationPage />} />
+    </Routes>
   );
 }
 

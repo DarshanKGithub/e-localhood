@@ -1,0 +1,7 @@
+.forgot-pwd {
+    position:absolute;
+    text-decoration: none;
+    color: white;
+    left: 648px; /* Adjust this value to position horizontally */
+    top: 350px; /* Adjust this value to position vertically */
+  }

@@ -1,0 +1,72 @@
+.update{
+    position: relative;
+    text-align: center;
+    top: 160px;
+    /* Use percentage for dynamic positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    /* Use percentage for dynamic width */
+    max-width: 500px;
+    /* Set max-width for responsiveness */
+    height: 300px;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 2px ;
+    resize: none;
+    box-shadow: 1px 2px 3px 0.5px rgb(172, 164, 164);
+    color: white;
+}
+
+.up-name{
+    position: fixed;
+    left: -350px;
+    top: 80px;
+
+}
+.update input{
+    position: fixed;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 15px;
+    left: 150px;
+    background: transparent;
+    text-align: center;
+    color: white;
+    top:80px;
+    font-family: sans-serif;
+    border: 1px solid white;
+}
+
+.btn-add{
+    position: fixed;
+    top: 250px;
+    left: 200px;
+    background-color:transparent;
+  color: white;
+  border: 2px solid #04AA6D; /* Green */
+
+}
+
+.pin1{
+    position: fixed;
+    top: 120px;
+    left: -350px;
+}
+
+.pincode input{
+    position: fixed;
+    top: 125px;
+}
+
+.landmark1{
+    position: fixed;
+    top: 160px;
+    left: -330px;
+}
+
+.landmark input{
+    position: fixed;
+    top: 165px;
+}
